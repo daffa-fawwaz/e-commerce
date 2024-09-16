@@ -2005,8 +2005,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\/\.\.\/image\/image\.png\'\)\] {
-  background-image: url('./../image/image.png');
+.bg-\[url\(\'\.\/image\/image\.png\'\)\] {
+  background-image: url('./image/image.png');
 }
 
 .decoration-slice {
@@ -2868,11 +2868,6 @@ video {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .lg\:font-bold {
