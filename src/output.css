@@ -2009,6 +2009,14 @@ video {
   background-image: url('./image/image.png');
 }
 
+.bg-\[url\(\'image\/image\.png\'\)\] {
+  background-image: url('image/image.png');
+}
+
+.bg-\[url\(\'\/image\/image\.png\'\)\] {
+  background-image: url('/image/image.png');
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
