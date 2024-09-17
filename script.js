@@ -11,11 +11,11 @@ function closeNavbar() {
 }
 
 const search = document.getElementById('search');
+const btnSearch = document.getElementById('btn-search')
 
- function openSearch() {
-    search.classList.add("translate-y-0");
-    search.classList.remove("-translate-y-full")
-}
+btnSearch.addEventListener('click', function() {
+    search.classList.toggle("translate-y-0")
+})
 
  function closeSearch() {
     search.classList.add("-translate-y-full");
