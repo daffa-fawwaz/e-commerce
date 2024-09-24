@@ -15,7 +15,7 @@ function closeNavbar() {
 const search = document.getElementById('search');
 const btnSearch = document.getElementById('btn-search')
 
-btnSearch.addEventListener('click', function() {
+btnSearch.addEventListener("click", function() {
     search.classList.toggle("translate-y-0")
 })
 
@@ -109,6 +109,8 @@ for (let i = 0; i < checkbox.length; i++) {
     }
     })
 } 
+
+
 
     
 

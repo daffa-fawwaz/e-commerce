@@ -24,7 +24,7 @@
     </style>
   </head>
   <body>
-    <nav class="w-full fixed z-20 bg-white">
+    <nav class="w-full fixed z-40 bg-white">
       <div class="container mx-auto p-4 flex items-center justify-between">
         <div class="w-32 md:w-40">
           <img src="./image/logo-compass.png" alt="" />
@@ -54,17 +54,19 @@
             </svg>
           </div>
           <div class="hidden lg:block">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              fill="#000000"
-              viewBox="0 0 256 256"
-            >
-              <path
-                d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120ZM68.67,208A64.36,64.36,0,0,1,87.8,182.2a64,64,0,0,1,80.4,0A64.36,64.36,0,0,1,187.33,208ZM208,208h-3.67a79.9,79.9,0,0,0-46.68-50.29,48,48,0,1,0-59.3,0A79.9,79.9,0,0,0,51.67,208H48V48H208V208Z"
-              ></path>
-            </svg>
+            <a href="login.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#000000"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120ZM68.67,208A64.36,64.36,0,0,1,87.8,182.2a64,64,0,0,1,80.4,0A64.36,64.36,0,0,1,187.33,208ZM208,208h-3.67a79.9,79.9,0,0,0-46.68-50.29,48,48,0,1,0-59.3,0A79.9,79.9,0,0,0,51.67,208H48V48H208V208Z"
+                ></path>
+              </svg>
+            </a>
           </div>
           <div id="btn-checkout" class="cursor-pointer">
             <svg
@@ -128,8 +130,12 @@
           Join Our Compass family and discover our best products and stories
         </p>
         <div class="flex gap-3 w-full mt-5">
-          <button class="bg-black p-3 w-1/2 text-white">Login</button>
-          <button class="border border-black p-3 w-1/2">Register</button>
+          <button class="bg-black p-3 w-1/2 text-white">
+            <a href="login.html#form-login">Login</a>
+          </button>
+          <button class="border border-black p-3 w-1/2">
+            <a href="login.html#form-register">Register</a>
+          </button>
         </div>
         <div class="flex justify-between items-center mt-24">
           <p class="">CONNECT WITH US</p>
@@ -179,9 +185,10 @@
       </div>
     </aside>
 
+    <!-- SEARCH -->
     <aside
       id="search"
-      class="w-full h-screen flex justify-center fixed z-30 -translate-y-full transition-all duration-300 ease-in-out"
+      class="w-full flex justify-center fixed z-30 -translate-y-full transition-all duration-300 ease-in-out"
     >
       <form action="" class="container mx-auto p-4 mt-20 relative">
         <input
@@ -220,7 +227,7 @@
     <!-- LAYOUT -->
     <div
       id="layout"
-      class="layout hidden w-full h-screen bg-[#0000004d] fixed z-30"
+      class="layout hidden w-full h-screen bg-[#0000004d] fixed z-50"
     ></div>
     <!-- CHECKOUT -->
     <aside
