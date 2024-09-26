@@ -654,13 +654,13 @@
 
       const notif = setTimeout(function () {
         notifContent.classList.add("opacity-100");
-        notifContent.classList.remove("opacity-0");
-      }, 500);
+        notifContent.classList.remove("opacity-0");      }, 500);
 
       closeNotif.addEventListener("click", function () {
         clearTimeout(notif);
         notifContent.classList.add("opacity-0");
         notifContent.classList.remove("opacity-100");
+        notifContent.classList.remove("z-50");
       });
     </script>
     <script src="script.js"></script>
