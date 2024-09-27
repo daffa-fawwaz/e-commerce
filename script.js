@@ -85,7 +85,7 @@ btnCloseCheckout.addEventListener("click", function() {
       const notif = setTimeout(function (e) {
         notifContent.classList.add("opacity-100");
         notifContent.classList.remove("opacity-0");
-      }, 700);
+      }, 850);
 
       closeNotif.addEventListener("click", function () {
         clearTimeout(notif);
