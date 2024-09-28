@@ -27,7 +27,9 @@
     <nav class="w-full fixed z-40 bg-white">
       <div class="container mx-auto p-4 flex items-center justify-between">
         <div class="w-32 md:w-40">
-          <img src="./image/logo-compass.png" alt="" />
+          <a href="index.html">
+            <img src="./image/logo-compass.png" alt="" />
+          </a>
         </div>
 
         <ul class="hidden lg:flex items-center gap-10">
@@ -53,7 +55,9 @@
               ></path>
             </svg>
           </div>
-          <div class="hidden lg:block">
+          <div
+            class="hidden lg:block cursor-pointer relative before:absolute before:inset-x-0 before:-bottom-3 before:h-1 before:origin-left before:scale-x-0 before:bg-black before:transition-all before:duration-400 hover:before:origin-right hover:before:scale-x-100"
+          >
             <a href="login.html">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,10 @@
               </svg>
             </a>
           </div>
-          <div id="btn-checkout" class="cursor-pointer">
+          <div
+            id="btn-checkout"
+            class="cursor-pointer relative before:absolute before:inset-x-0 before:-bottom-3 before:h-1 before:origin-left before:scale-x-0 before:bg-black before:transition-all before:duration-400 hover:before:origin-right hover:before:scale-x-100"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"

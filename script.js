@@ -1,3 +1,4 @@
+
 // NAVBAR
 
 const nav = document.getElementById('nav');
@@ -79,20 +80,7 @@ btnCloseCheckout.addEventListener("click", function() {
     layout.classList.add("hidden")
 })
 
-      const closeNotif = document.getElementById("close-notif");
-      const notifContent = document.getElementById("notif");
 
-      const notif = setTimeout(function (e) {
-        notifContent.classList.add("opacity-100");
-        notifContent.classList.remove("opacity-0");
-      }, 850);
-
-      closeNotif.addEventListener("click", function () {
-        clearTimeout(notif);
-        notifContent.classList.add("opacity-0");
-        notifContent.classList.remove("opacity-100");
-        notifContent.classList.remove("z-50");
-      });
 
 const btnSize = document.getElementById("btn-size");
 const boxSize = document.getElementById("box-size");
@@ -124,6 +112,7 @@ for (let i = 0; i < checkbox.length; i++) {
     }
     })
 } 
+
 
 
 
