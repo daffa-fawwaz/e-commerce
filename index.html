@@ -669,9 +669,11 @@
       closeNotif.addEventListener("click", function () {
         clearTimeout(notif);
         notifContent.classList.add("opacity-0");
+        notifContent.classList.add("-z-10");
         notifContent.classList.remove("opacity-100");
         notifContent.classList.remove("z-50");
-      });    </script>
+      });
+    </script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   </body>

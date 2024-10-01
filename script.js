@@ -82,36 +82,34 @@ btnCloseCheckout.addEventListener("click", function() {
 
 
 
-const btnSize = document.getElementById("btn-size");
-const boxSize = document.getElementById("box-size");
-const checkbox = [ document.getElementById("check-1"),
-                document.getElementById("check-2"),
-                document.getElementById("check-3"),
-                document.getElementById("check-4"),
-                document.getElementById("check-5"),
-                document.getElementById("check-6"),
-                document.getElementById("check-7"),
-                document.getElementById("check-8"),
-];
+const btnSize = document.querySelectorAll(".btn-size");
+const boxSize = document.querySelectorAll(".box-size");
+const checkbox = document.querySelectorAll(".peer")
 
 for (let i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener("change", function() {       
+    for (let x = 0; x < btnSize.length; x++) {
+      for (let y = 0; y < boxSize.length; y++) {
+        checkbox[i].addEventListener("change", function() {       
  if (checkbox[i].checked) {
-    
-        btnSize.classList.add("text-white")
-        btnSize.innerHTML = 'Add to Bag';
-        btnSize.classList.remove("text-slate-600")
-        boxSize.classList.add("bg-black");
-        boxSize.classList.remove("bg-gray-200");
+
+        btnSize[x].classList.add("text-white")
+        btnSize[x].innerHTML = 'Add to Bag';
+        btnSize[x].classList.remove("text-slate-600")
+  
+        boxSize[y].classList.add("bg-black");
+        boxSize[y].classList.remove("bg-gray-200");
     } else {
-        btnSize.classList.remove("text-white")
-        btnSize.innerHTML = 'Choose Size';
-        btnSize.classList.add("text-slate-600")
-        boxSize.classList.remove("bg-black");
-        boxSize.classList.add("bg-gray-200");
+        btnSize[x].classList.remove("text-white")
+        btnSize[x].innerHTML = 'Choose Size';
+        btnSize[x].classList.add("text-slate-600")
+        boxSize[y].classList.remove("bg-black");
+        boxSize[y].classList.add("bg-gray-200");
     }
     })
+        
+    }
 } 
+}
 
 
 
