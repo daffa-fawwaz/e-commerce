@@ -24,6 +24,41 @@
     </style>
   </head>
   <body>
+    <div
+      id="open-popup"
+      class="w-full transition-all opacity-0 duration-75 ease-in-out h-screen flex fixed -z-10 bg-[#00000094]"
+    >
+      <div class="container mx-auto p-4 flex justify-center items-center">
+        <div
+          class="flex flex-col p-4 lg:p-5 relative w-80 lg:w-[450px] bg-white"
+        >
+          <div id="close-popup" class="absolute top-3 right-3 cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="#000000"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="w-64 h-64 mx-auto -mb-8">
+            <img src="./image/succes.png" alt="" class="w-full h-full" />
+          </div>
+          <p
+            class="mt-1 font-semibold text-slate-700 text-3xl text-center mr-3"
+          >
+            Succes!
+          </p>
+          <p class="text-sm text-center mt-3 text-slate-700">
+            Terimakasih Telah Membeli Produk Kami
+          </p>
+        </div>
+      </div>
+    </div>
     <nav class="w-full fixed z-40 bg-white">
       <div class="container mx-auto p-4 flex items-center justify-between">
         <div class="w-32 md:w-40">
@@ -634,7 +669,8 @@
           </div>
 
           <div
-            class="box-size w-full h-14 bg-gray-200 flex justify-center items-center mt-5"
+            id="box-size"
+            class="box-size w-full h-14 bg-gray-200 flex justify-center items-center mt-5 cursor-pointer"
           >
             <p class="btn-size text-slate-500">Choose Size</p>
           </div>
