@@ -25,6 +25,17 @@ btnSearch.addEventListener("click", function() {
     search.classList.remove("translate-y-0")
 }
 
+const navbarHeight = document.getElementById("navbar-height")
+const shop = document.getElementById("shop");
+
+shop.addEventListener("mouseenter", function() {
+  navbarHeight.classList.add("h-[380px]")
+})
+
+navbarHeight.addEventListener("mouseleave", function() {
+  navbarHeight.classList.remove("h-[380px]")
+})
+
 const checkout = document.getElementById("checkout");
 const btnOpenCheckout = document.getElementById("btn-checkout");
 const btnCloseCheckout = document.getElementById("close-checkout");
@@ -112,15 +123,16 @@ for (let i = 0; i < checkbox.length; i++) {
 } 
 }
 
-  const openPopup = document.getElementById("open-popup");
+    const openPopup = document.getElementById("open-popup");
     const closePopUp = document.getElementById("close-popup")
+    const warnMessage = document.getElementById("warn-message")
 
     for (let i = 0; i < checkbox.length; i++) {
       for (let y = 0; y < boxSize.length; y++) {
         boxSize[y].addEventListener("click", function () {
           if(checkbox[i].checked) {
             getPopUp()
-          }
+          } 
         });
       }
       }
