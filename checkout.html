@@ -784,58 +784,61 @@
     </footer>
 
     <script>
-      const btnSize = document.querySelectorAll(".btn-size");
-      const boxSize = document.querySelectorAll(".box-size");
-      const checkbox = document.querySelectorAll(".peer");
+      const checkout = document.getElementById("checkout");
+      const btnOpenCheckout = document.getElementById("btn-checkout");
+      const btnCloseCheckout = document.getElementById("close-checkout");
+      const layout = document.getElementById("layout");
 
-      for (let i = 0; i < checkbox.length; i++) {
-        for (let x = 0; x < btnSize.length; x++) {
-          for (let y = 0; y < boxSize.length; y++) {
-            checkbox[i].addEventListener("change", function () {
-              if (checkbox[i].checked) {
-                btnSize[x].classList.add("text-white");
-                btnSize[x].innerHTML = "Purchase Now";
-                btnSize[x].classList.remove("text-slate-600");
-                boxSize[y].classList.add("bg-black");
-                boxSize[y].classList.remove("bg-gray-200");
-              } else {
-                btnSize[x].classList.remove("text-white");
-                btnSize[x].innerHTML = "Choose Size";
-                btnSize[x].classList.add("text-slate-600");
-                boxSize[y].classList.remove("bg-black");
-                boxSize[y].classList.add("bg-gray-200");
-              }
-            });
+      btnOpenCheckout.addEventListener("click", function () {
+        checkout.classList.add("translate-x-0");
+        checkout.classList.remove("translate-x-full");
+        layout.classList.remove("hidden");
+
+        const addBtn = document.getElementById("add");
+        const minBtn = document.getElementById("min");
+        const order = document.getElementById("order1");
+        const total = document.getElementById("total");
+        const nomHarga = 408000;
+        const overTotal = document.getElementById("over-total");
+
+        addBtn.addEventListener("click", function () {
+          let hasil = parseInt(order.value);
+          order.value = hasil + 1;
+
+          if (hasil >= 10) {
+            overTotal.classList.remove("hidden");
           }
-        }
-      }
 
-      const openPopup = document.getElementById("open-popup");
-      const closePopUp = document.getElementById("close-popup");
-      const warnMessage = document.getElementById("warn-message");
+          updateTotal();
+        });
 
-      for (let i = 0; i < checkbox.length; i++) {
-        for (let y = 0; y < boxSize.length; y++) {
-          boxSize[y].addEventListener("click", function () {
-            if (checkbox[i].checked) {
-              getPopUp();
+        minBtn.addEventListener("click", function () {
+          let hasil = parseInt(order.value);
+          if (hasil > 1) {
+            order.value = hasil - 1;
+            if (hasil > 10) {
+              overTotal.classList.add("hidden");
             }
-          });
-        }
-      }
-      closePopUp.addEventListener("click", function () {
-        openPopup.classList.add("opacity-0");
-        openPopup.classList.remove("opacity-100");
-        openPopup.classList.remove("z-50");
-      });
 
-      function getPopUp() {
-        openPopup.classList.add("opacity-100");
-        openPopup.classList.add("z-50");
-        openPopup.classList.remove("opacity-0");
-      }
+            updateTotal();
+          }
+        });
+
+        function updateTotal() {
+          var hitungHasil = parseInt(order.value);
+          var jumlahHasil = nomHarga * hitungHasil;
+
+          total.textContent = `IDR ${jumlahHasil.toLocaleString()}`;
+        }
+      });
+      btnCloseCheckout.addEventListener("click", function () {
+        checkout.classList.add("translate-x-full");
+        checkout.classList.remove("translate-x-0");
+        layout.classList.add("hidden");
+      });
     </script>
-    <script src="script.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   </body>
 </html>
