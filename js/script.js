@@ -27,14 +27,30 @@ btnSearch.addEventListener("click", function() {
 
 const navbarHeight = document.getElementById("navbar-height")
 const shop = document.getElementById("shop");
+const story = document.getElementById("story");
+const collab = document.getElementById("collaboration");
 
 shop.addEventListener("mouseenter", function() {
   navbarHeight.classList.add("h-[380px]")
 })
 
+story.addEventListener("mouseenter", function() {
+  navbarHeight.classList.remove("h-[380px]")
+})
+
+collab.addEventListener("mouseenter", function() {
+  navbarHeight.classList.remove("h-[380px]")
+})
+
+
 navbarHeight.addEventListener("mouseleave", function() {
   navbarHeight.classList.remove("h-[380px]")
 })
+
+
+// container1.addEventListener("mouseleave", function() {
+//   navbarHeight.classList.remove("h-[380px]")
+// })
 
 const checkout = document.getElementById("checkout");
 const btnOpenCheckout = document.getElementById("btn-checkout");
